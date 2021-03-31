@@ -2,15 +2,16 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:http/http.dart' as http;
 import 'package:bitcoin_calculator/bitcoin_API.dart';
+import 'package:bitcoin_calculator/calculator.dart';
 
 class MockClient extends Mock implements http.Client{
 
-  
+
 }
 
 void main() {
   
-   test('returns a String if the http call completes successfully'() async{
+   test('returns a String if the http call completes successfully',() async{
 
 
         final client = MockClient();
@@ -28,7 +29,7 @@ void main() {
 
         String price = await BitcoinAPI.fetchBTC(client);
 
-        expect(price, isA<String());
+        expect(price, isA<String>());
         
 
         expect(price,56290.2083);
