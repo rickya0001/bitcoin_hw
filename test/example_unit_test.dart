@@ -3,7 +3,10 @@ import 'package:mockito/mockito.dart';
 import 'package:http/http.dart' as http;
 import 'package:bitcoin_calculator/bitcoin_API.dart';
 
-class MockClient extends Mock implements http.Client{}
+class MockClient extends Mock implements http.Client{
+
+  
+}
 
 void main() {
   
